@@ -17,8 +17,8 @@ const data = common.getCategories()
       .readdirSync([rootDir, category, pngPath].join(path.sep))
       .filter(filename => filename.endsWith(pngTail))
       .map(filename => {
-        const arg = filename.replace(pngTail, '');
-        const title = arg.replace(/^ic_/, '').replace(/_/g, ' ');
+        const arg = filename.replace(pngTail, '').replace(/^ic_/, '');
+        const title = arg.replace(/_/g, ' ');
 
         return {
           title: title,
